@@ -1,0 +1,65 @@
+.quiz-box {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+  padding: 40px;
+}
+.quiz-box p {
+  text-align: center;
+  width: 70%;
+  font-size: 17px;
+  font-weight: 600;
+  color: #555;
+}
+.quiz-box .choices-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.quiz-box .select-answer {
+  width: 130px;
+  height: 50px;
+  border: 1px solid var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.quiz-box .select-answer:hover {
+  background: var(--light);
+}
+.quiz-box .select-answer:hover span {
+  color: var(--color);
+}
+.quiz-box .select-answer i {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: var(--color);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s;
+}
+.quiz-box .select-answer.active i {
+  visibility: visible;
+  opacity: 1;
+}
+.quiz-box .select-answer span {
+  font-size: 16px;
+  color: #333;
+}
+.quiz-box .select-answer.active {
+  background: var(--light);
+  border-color: var(--color);
+}
+.quiz-box .select-answer.active span {
+  color: var(--color)
+}
