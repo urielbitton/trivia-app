@@ -5,6 +5,7 @@ import { Switch } from "react-router-dom"
 import { StoreContext } from "../store/store"
 import Homepage from "../pages/Homepage"
 import QuizPage from "../pages/QuizPage"
+import ResultsPage from "../pages/ResultsPage"
 
 export default function AppContainer() {
 
@@ -18,6 +19,9 @@ export default function AppContainer() {
         </Route>
         <Route path="/quiz">
           <QuizPage />
+        </Route>
+        <Route path="/results">
+          <ResultsPage />
         </Route>
       </Switch> 
     </div>

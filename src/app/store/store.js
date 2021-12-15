@@ -5,6 +5,7 @@ export const StoreContext = createContext()
  
 const StoreContextProvider = (props) => {
 
+  const [submissions, setSubmissions] = useState([])
   const [darkMode, setDarkMode] = useState(localStorage.getItem('darkmode') === "true" ? true : false)
 
   useEffect(() => {
@@ -12,7 +13,8 @@ const StoreContextProvider = (props) => {
   },[darkMode]) 
 
   return <StoreContext.Provider value={{ 
-    darkMode, setDarkMode
+    darkMode, setDarkMode,
+    submissions, setSubmissions
   }}>
     {props.children}
   </StoreContext.Provider>
