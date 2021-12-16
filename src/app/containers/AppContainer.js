@@ -3,9 +3,9 @@ import '../styles/AppContainer.css'
 import { Route } from 'react-router'
 import { Switch } from "react-router-dom"
 import { StoreContext } from "../store/store"
-import Homepage from "../pages/Homepage"
-import QuizPage from "../pages/QuizPage"
-import ResultsPage from "../pages/ResultsPage"
+import Homepage from "../pages/Home/Homepage"
+import QuizPage from "../pages/Quiz/QuizPage"
+import ResultsPage from "../pages/Results/ResultsPage"
 
 export default function AppContainer() {
 

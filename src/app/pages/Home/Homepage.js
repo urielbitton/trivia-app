@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { useHistory } from "react-router-dom"
-import '../styles/Homepage.css'
-import { StoreContext } from "../store/store"
+import '../../styles/Homepage.css'
+import { StoreContext } from "../../store/store"
 import HomepageUI from "./HomepageUI"
 
 export default function Homepage() {

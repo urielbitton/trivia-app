@@ -1,6 +1,6 @@
 import React from 'react'
-import AppModal from "../components/AppModal"
-import { AppInput, AppSelect } from '../components/AppInputs'
+import AppModal from "../../components/AppModal"
+import { AppInput, AppSelect } from '../../components/AppInputs'
 
 export default function HomepageUI(props) {
 

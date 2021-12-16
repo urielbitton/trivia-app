@@ -7,6 +7,7 @@
   left: 30px;
   background: none;
   color: var(--color);
+  z-index: 999;
 }
 .back-home-btn:hover {
   background: var(--light);

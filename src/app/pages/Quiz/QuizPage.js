@@ -1,16 +1,16 @@
 import React, { useContext, useEffect, useState } from 'react'
-import Slide from "../components/Slide"
-import { getTriviaQuestions } from '../services/triviaServices'
-import '../styles/SlideContainer.css'
-import '../styles/QuizPage.css'
-import QuizBox from "../components/QuizBox"
-import Loader from '../components/Loader'
+import Slide from "../../components/Slide"
+import { getTriviaQuestions } from '../../services/triviaServices'
+import '../../styles/SlideContainer.css'
+import '../../styles/QuizPage.css'
+import QuizBox from "../../components/QuizBox"
 import { useHistory } from "react-router-dom"
-import { StoreContext } from "../store/store"
+import { StoreContext } from "../../store/store"
+import QuizPageUI from "./QuizPageUI"
 
 export default function QuizPage() {
 
-  const { questionsNum, quizDifficulty, submission, setSubmission } = useContext(StoreContext)
+  const { questionsNum, quizDifficulty, setSubmission } = useContext(StoreContext)
   const [triviaQuestions, setTriviaQuestions] = useState([])
   const [slidePosition, setSlidePosition] = useState(0)
   const [isLoading, setIsLoading] = useState(false)
@@ -87,38 +87,15 @@ export default function QuizPage() {
   },[])
 
   return (
-    <div className="quiz-page">
-      <button 
-        className="back-home-btn"
-        onClick={() => history.push('/')}
-      >
-        <i className="fal fa-arrow-left"></i>
-        Home
-      </button>
-      <div className="slide-container">
-        {
-          isLoading ? 
-          <Loader /> :
-          triviaRender
-        }
-      </div>
-      <div className="navigation-container">
-        {
-          slidePosition !== (quizLength-1) ?
-          <button 
-            onClick={() => selection.length && onNextClick()}
-            className={selection.length ? "" : "disabled"}
-          >
-            Next
-          </button> :
-          <button 
-            className={!selection.length ? "disabled" : ""}
-            onClick={() => onQuizSubmit()}
-          >
-            Submit
-          </button>
-        }
-        </div>
-    </div>
+    <QuizPageUI 
+      history={history}
+      isLoading={isLoading}
+      triviaRender={triviaRender}
+      slidePosition={slidePosition}
+      quizLength={quizLength}
+      selection={selection}
+      onNextClick={onNextClick}
+      onQuizSubmit={onQuizSubmit}
+    />
   )
 }

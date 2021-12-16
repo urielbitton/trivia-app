@@ -1,8 +1,9 @@
 import React, { useContext, useEffect } from 'react'
-import '../styles/ResultsPage.css'
-import { StoreContext } from '../store/store'
-import ResultCard from "../components/ResultCard"
+import '../../styles/ResultsPage.css'
+import { StoreContext } from '../../store/store'
+import ResultCard from "../../components/ResultCard"
 import { useHistory } from "react-router-dom"
+import ResultsPageUI from "./ResultsPageUI"
 
 export default function ResultsPage() {
 
@@ -30,21 +31,14 @@ export default function ResultsPage() {
   },[])
 
   return (
-    <div className="results-page">
-      <div className="titles">
-        <h3>You Scored</h3>
-        <h4>{score} / {questionsNum} - {percentage.toFixed(1)}%</h4>
-      </div>
-      <div className="results-container">
-        {resultCardsRender}
-      </div>
-      <button 
-        className="start-over-btn"
-        onClick={() => startNewTrivia()}
-      >
-        Start Over
-        <i className="fal fa-arrow-right"></i>
-      </button>
-    </div>
+    <ResultsPageUI 
+      history={history}
+      score={score}
+      questionsNum={questionsNum}
+      percentage={percentage}
+      resultCardsRender={resultCardsRender} 
+      startNewTrivia={startNewTrivia}
+      setSubmission={setSubmission}
+    />
   )
 }
