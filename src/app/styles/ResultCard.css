@@ -19,10 +19,10 @@
   font-size: 25px;
 }
 .result-card i.fa-check {
-  color: var(--green); 
+  color: #6dcc00; 
 }
 .result-card i.fa-times {
-  color: var(--red);
+  color: #fc003f;
 }
 .result-card p {
   font-size: 15px;
