@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 .homepage section.intro-section h4 {
   font-size: 20px;
@@ -20,10 +20,17 @@
 .homepage section.intro-section h1 {
   font-size: 40px;
   font-weight: 500;
+  text-align: center;
 }
 .homepage section.middle-section p {
   font-size: 19px;
   color: #555;
+  text-align: center;
+}
+.homepage section.middle-section small {
+  color: #777;
+  text-transform: capitalize;
+  margin-bottom: 20px;
 }
 .homepage section.middle-section span {
   font-size: 17px;
@@ -41,4 +48,24 @@
 }
 .homepage button:hover i {
   left: 7px;
+}
+.homepage .advanced-section {
+  margin-top: 30px;
+}
+.homepage .advanced-section > span {
+  font-size: 13px;
+  color: #555;
+}
+.homepage .advanced-section > span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.homepage .advanced-section > span i {
+  margin-right: 7px;
+  left: 0;
+  transition: all 0.3s;
+}
+.homepage .advanced-section > span:hover i {
+  left: 4px;
+  transform: rotate(100deg)
 }

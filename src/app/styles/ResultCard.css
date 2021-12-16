@@ -1,0 +1,34 @@
+.result-card {
+  width: 95%;
+  padding: 20px;
+  min-height: 80px; 
+  border-radius: 10px;
+  box-shadow: var(--blueShadow);
+  background: rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.result-card > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.result-card i {
+  font-size: 25px;
+}
+.result-card i.fa-check {
+  color: var(--green); 
+}
+.result-card i.fa-times {
+  color: var(--red);
+}
+.result-card p {
+  font-size: 15px;
+  color: #444;
+  font-weight: 600;
+}
+.result-card small {
+  color: #555;
+}

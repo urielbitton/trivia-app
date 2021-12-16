@@ -12,6 +12,8 @@ html, body {
   --bgColor: #eaecf0;
   --shadow: 0 0 18px rgba(0,0,0,0.1);
   --blueShadow: 0 5px 20px 2px rgba(95, 177, 233, 0.3);
+  --green: #6dcc00;
+  --red: #fc003f;
   --graytxt: #696e93;
   --white1: #fff;
   --white2: #fff;

@@ -1,9 +1,9 @@
 import axios from 'axios'
 
-export const getTriviaQuestions = (setResults) => {
+export const getTriviaQuestions = (amount, difficulty, setResults) => {
   var options = {
     method: 'GET',
-    url: 'https://opentdb.com/api.php?amount=10&difficulty=hard&type=boolean',
+    url: `https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}&type=boolean`,
   }
   return axios.request(options).then((response) => {
     setResults(response.data.results)

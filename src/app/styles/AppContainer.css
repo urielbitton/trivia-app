@@ -1,0 +1,17 @@
+.app-container {
+
+}
+.back-home-btn {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  background: none;
+  color: var(--color);
+}
+.back-home-btn:hover {
+  background: var(--light);
+  box-shadow: 0 0px 4px rgba(0,0,0,0.05);
+}
+.back-home-btn i {
+  margin-right: 5px;
+}
